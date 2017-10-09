@@ -16,6 +16,12 @@ var text = gunJak.firstChild.nodeValue;
 text = text.replace('Gunnar', 'Jakob');
 gunJak.firstChild.nodeValue = text;
 
+//6.5
+/* innerHTML skilar öllu í einum streng frá JavaScript yfir í Html skjalið á meðan DOM manipulation getur skilað miklu meira, 
+þæginlega þá þegar þú ert með stærri kóða, DOM manipulation notar líka þrjú skref til að skila kóða. Þau eru createElement(), createTextNode() og appendChild() */
+
+
+//6.6
 var newEl = document.createElement('main');
 var div1 = document.createElement('div');
 div1.className = "pizza";
@@ -43,7 +49,25 @@ var div5 = document.createElement('div');
 div5.className = "toppingContainer";
 div1.appendChild(div4);
 
+var span1 = document.createElement('SPAN');
+span1.className = "topping";
+var span1Text = document.createTextNode("pepperoni &");
+span1.appendChild(span1Text);
+div5.appendChild(span1);
+
+var span2 = document.createElement('SPAN');
+span2.className = "topping";
+var span2Text = document.createTextNode("pepperoni &");
+span2.appendChild(span2Text);
+div5.appendChild(span2);
+
+var span3 = document.createElement('SPAN');
+span3.className = "topping";
+var span3Text = document.createTextNode("Cheddar");
+span3.appendChild(span3Text);
+div5.appendChild(span3);
+
 document.body.appendChild(newEl);
-/*var newText = document.createTextNode('qinoa');
-newEl.appendChild(newText);
-document.body.appendChild(newEl);*/
+
+//6.7
+/* Það er þegar einhver setur vírus á jacascript vefsíðu og ræðst á notanda
